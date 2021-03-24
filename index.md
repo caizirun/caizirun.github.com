@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+### 个人信息
+1.姓名：蔡梓润
+2.学历：本科
+3.学校：南京理工大学
+4.邮箱，，@qq.com
+5.地址：南京理工大学
 
-You can use the [editor on GitHub](https://github.com/caizirun/caizirun.github.com/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 最新消息
+1.消息暂时还没到
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 研究方向
+管理工程
 
-```markdown
-Syntax highlighted code block
+### 荣誉奖励
+未来会有的吧
 
-# Header 1
-## Header 2
-### Header 3
+### 项目研究
+音乐治疗APP研发
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/caizirun/caizirun.github.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### 个人喜好
+喜欢学习
