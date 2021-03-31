@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.sky{text-align: center;
+	background-color: aqua;
+	color: azure;
+	font: oblique;}
+p{
+	align-content: center;
+	background:repeat-x;
+}
