@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+
+<link href="bgcss.css" rel="stylesheet" type="text/css">
+</head>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo2">一个段落</p>
+<button type="button" onclick="myFunction()">试一试</button>
+<button type="button" onclick="myFunction2()">试一试</button>
+<script>
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "周日";
+    break;
+  case 1:
+    day = "周一";
+    break;
+  case 2:
+    day = "周二";
+    break;
+  case 3:
+    day = "周三";
+    break;
+  case 4:
+    day = "周四";
+    break;
+  case 5:
+    day = "周五";
+    break;
+  case  6:
+    day = "周六";
+}
+document.getElementById("demo").innerHTML = "今天是" + day;
+	
+</script>
+	<script>
+function myFunction() {
+    document.getElementById("demo2").innerHTML = "段落已被更改。" + day;
+}
+function myFunction2() {
+    document.getElementById("demo2").innerHTML = "段落又被更改了。" + day;
+}
+</script>
+
+</body>
+</html>
