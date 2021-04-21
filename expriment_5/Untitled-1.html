@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'100%',
+      width:'100%'
+    });
+  });
+});
+</script> 
+	<style>
+		.divphoto{
+			background: url("photo.jpg");
+			height:100px;width:100px;position:absolute;
+		}</style>
+</head>
+ 
+<body>
+
+<button>开始动画</button>
+<div class="divphoto">
+</div>
+
+</body>
+</html>
