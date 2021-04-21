@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+ 
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        ul,
+        ol {
+            list-style: none;
+        }
+ 
+        .wrapper {
+        background-position: absolute;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        overflow: visible;
+        bottom: 0px;
+        }
+ 
+        ul {
+            position: relative;
+        }
+ 
+        ul li {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+ 
+        ol {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            width: 190px;
+        }
+ 
+        ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            text-align: center;
+            border-radius: 50%;
+            cursor: default;
+            background-color: #fff;
+        }
+ 
+        ol li.current {
+            background-color: pink;
+            color: #fff;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="wrapper">
+        <ul id="box">
+            <li style="z-index: 6;"><img src="src=http___b-ssl.duitang.com_uploads_item_201807_13_20180713171820_pvdnj.jpeg&refer=http___b-ssl.duitang.jfif" /></li>
+            <li style="z-index: 5;"><img src="src=http___hbimg.b0.upaiyun.com_00fdeef265408ace8078b131c568dd5716c336bbe312-HrZzZE_fw658&refer=http___hbimg.b0.upaiyun.jfif"/></li>
+            <li style="z-index: 4;"><img src="src=http___hbimg.b0.upaiyun.com_d49c95ee12a707f8a34df09045c1a79501b8e3006984-jGSS5N_fw658&refer=http___hbimg.b0.upaiyun.jfif" /></li>
+            <li style="z-index: 3;"><img src="src=http___hbimg.b0.upaiyun.com_d237bd35800e175810a5969254ea5d10555719e093ff-F1xVcs_fw658&refer=http___hbimg.b0.upaiyun.jfif"/></li>
+            <li style="z-index: 2;"><img src="src=http___hbimg.b0.upaiyun.com_e8f236729916605e74a83b73f0f4dcf39a6a1d0cabf7-krdJfx_fw658&refer=http___hbimg.b0.upaiyun.jfif" /></li>
+            <li style="z-index: 1;"><img src="src=http___n.sinaimg.cn_translate_783_w640h943_20180512_IO2Q-hamfahw9921843.jpg&refer=http___n.sinaimg.jfif"/></li>
+        </ul>
+        <ol style="z-index: 10;" id="uu">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ol>
+    </div>
+</body>
+ 
+</html>
+ 
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script type="text/javascript">
+    var loupe = (function () {
+        var $box = $('#box');
+        var $uubox = $('#uu');
+        var timer = null;
+        return {
+            init() {
+                this.events();
+                this.autoPlay();
+            },
+            events() {
+                var _this = this;
+                $uubox.on('click', 'li', function () {
+                    _this.showImg($(this).index());
+                    _this.autoPlay($(this).index());
+                })
+            },
+            showImg(index) {
+                $uubox.children('li').eq(index).addClass('current').siblings().removeClass('current');
+                $box.children('li').eq(index).fadeIn().siblings().fadeOut();
+            },
+            autoPlay(index) {
+                var _this = this;
+                index = index || 0;
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    index++;
+                    if (index == $($uubox).children('li').length) {
+                        index = 0;
+                    }
+                    _this.showImg(index);
+                }, 3000);
+            }
+        }
+    })();
+    loupe.init();
+</script>
